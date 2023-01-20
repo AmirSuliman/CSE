@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioData</title>
+
+  <style>
+    body {
+      font-family: Courier;
+      background-color: rgb(201, 216, 116);
+      text-align: center;
+     
+    }
+
+    h1.form {
+      background-color: pink;
+    }
+
+    p.Name {
+      border-style: solid;
+      border-color: green;
+    }
+
+    p.pass {
+      border-style: solid;
+      border-color: red;
+    }
+
+    p.user {
+      border-style: solid;
+      border-color: cyan;
+    }
+
+    p.Reg {
+      border-style: solid;
+      border-color: crimson;
+    }
+
+    p.gender {
+      border-style: solid;
+      border-color: chartreuse;
+
+    }
+  </style>
+</head>
+
+<body>
+  <P>
+  <h1 class="form">Biodata</h1>
+
+  <forms>
+    <label>Name:</label>
+    <input type="text" name="name1" id="name1" /><br /><br />
+
+    <label>Reg No:</label>
+    <input type="text" name="regNO" id="regNO" /><br /><br />
+
+    <label>User Name:</label>
+    <input type="text" name="usrName" id="usrName" /><br /><br />
+
+    <label>Password:</label>
+    <input type="password" name="pass1" id="pass1" /><br /><br />
+
+    <label>Gender:</label>
+    <select id="gend" size="2">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select><br /><br />
+
+    <label for="course">Courses:Computer fundamentals</label>
+    <input type="checkbox" name="course" id="course" /><br /><br />
+
+    <label for="CF">Computer fundamental lab</label>
+    <input type="checkbox" name="CF" id="CF" /><br /><br />
+
+    <label>Are the courses easy?</label>
+    <input type="radio" name="easy" id="easy" /><br /><br />
+
+    <input type="submit" onclick="call()" value="click here to submit" />
+  </forms>
+
+  <p id="A" class="Name"></p>
+  <p id="B" class="Reg"></p>
+  <p id="C" class="user"></p>
+  <p id="D" class="pass"></p>
+  <p id="E" class="gender"></p>
+  </P>
+
+  <script>
+    function call() {
+      var input1, input2, input3, input4, input5;
+      input1 = document.getElementById("name1").value;
+      input2 = document.getElementById("regNO").value;
+      input3 = document.getElementById("usrName").value;
+      input4 = document.getElementById("pass1").value;
+      input5 = document.getElementById("gend").value;
+      document.getElementById("A").innerHTML = input1;
+      document.getElementById("B").innerHTML = input2;
+      document.getElementById("C").innerHTML = input3;
+      document.getElementById("D").innerHTML = input4;
+      document.getElementById("E").innerHTML = input5;
+    }
+  </script>
+</body>
+
+</html>

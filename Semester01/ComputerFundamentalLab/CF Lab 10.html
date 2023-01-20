@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Calculator</title>
+</head>
+
+<body align="center" background="white">
+  <h2>My Calculator</h2>
+  <label for="id1">Number:</label>
+  <input type="text" name="id1" id="id1" />
+  <label for="q2">Operator:</label>
+  <input type="text" name="id2" id="id2" />
+  <label for="id3">Number:</label>
+  <input type="text" name="id3" id="id3" /><br></br>
+  <label for="id4"></label>
+  <input type="button" value="calculate" name="id4" id="id4" onclick="calculater()" /></br></br>
+  <p>Result:</p>
+  <p id="id5" name="id5"></p>
+
+  <!--javascript code-->
+  <script>
+    function calculater() {
+      var Num1, Operator1, Num2;
+      Num1 = parseInt(document.getElementById("id1").value);
+      Operator1 = (document.getElementById("id2").value);
+      Num2 = parseInt(document.getElementById("id3").value);
+
+      if (Operator1 == "+") { document.getElementById("id5").innerHTML = Num1 + Num2; }
+      else if (Operator1 == "-") { document.getElementById("id5").innerHTML = Num1 - Num2; }
+      else if (Operator1 == "/") { document.getElementById("id5").innerHTML = Num1 / Num2; }
+      else if (Operator1 == "*") { document.getElementById("id5").innerHTML = Num1 * Num2; }
+      else { document.getElementById("id5").innerHTML = "Wrong Operator!"; }
+    }
+  </script>
+</body>
+
+</html>
